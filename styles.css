@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+}
+
+body{
+    overflow: hidden;
+    background-color: rgb(30, 37, 48);
+}
+
+container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
