@@ -1,13 +1,7 @@
-//const revealDate = new Date(Date.UTC(2021, 4, 23, 22));
-
-const revealDate = new Date(Date.now());
-revealDate.setMinutes(5);
-
+const revealDate = new Date(Date.UTC(2021, 4, 23, 22));
 const contentElement = document.getElementById('content');
 
-console.log(revealDate.toUTCString());
-
-var intervalId = setInterval(updateRemainingTime, 1000);
+const intervalId = setInterval(updateRemainingTime, 1000);
 
 function updateRemainingTime() {
     contentElement.innerText = getRemainingTimeString();
