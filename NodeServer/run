@@ -1,0 +1,16 @@
+#!/usr/bin/node
+var fs = require('fs');
+var spawn = require('child_process').spawn;
+
+var out = fs.openSync('./out.log', 'a');
+var err = fs.openSync('./out.log', 'a');
+try {
+        var child = spawn('node', ['index.js'], {
+                detached: true,
+                stdio: ['ignore', out, err]
+        }).on('error', (e) => console.log(e));
+
+        child.unref();
+} catch (e) {
+        console.log(e);
+}
