@@ -4,7 +4,7 @@ const http = require('http');
 const host = 'localhost';
 const port = 34343;
 
-const revealDate = new Date(Date.UTC(2021, 4, 23, 22));
+const revealDate = new Date(Date.UTC(2021, 4, 23, 21, 59, 50));
 
 process.on('uncaughtException', function (err) {
     console.error((err && err.stack) ? err.stack : err);
@@ -27,6 +27,8 @@ function startServer() {
 
     http.createServer((req, res) => {
         console.log('Request from: ' + req.socket.remoteAddress);
+
+        res.setHeader('Access-Control-Allow-Origin', '*');
 
         const millis = revealDate.valueOf() - Date.now();
         if (millis <= 0) {
