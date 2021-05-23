@@ -28,7 +28,7 @@ function getTheme() {
     let result = null;
     let xhttp = new XMLHttpRequest();
 
-    xhttp.open("GET", "http://47e764412cc5.ngrok.io", false);
+    xhttp.open("GET", "http://132b8e9daefa.ngrok.io", false);
     xhttp.setRequestHeader('Content-type', 'text/plain');
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200)
