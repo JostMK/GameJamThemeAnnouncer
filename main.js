@@ -1,9 +1,9 @@
 const revealDate = new Date(Date.UTC(2021, 4, 23, 22));
 const contentElement = document.getElementById('content');
 
-updateRemainingTime();
-
 const intervalId = setInterval(updateRemainingTime, 1000);
+
+updateRemainingTime();
 
 function updateRemainingTime() {
     contentElement.innerText = getRemainingTimeString();
