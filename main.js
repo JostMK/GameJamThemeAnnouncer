@@ -13,7 +13,7 @@ function getRemainingTimeString() {
     const millis = revealDate.valueOf() - Date.now();
 
     if (millis <= 0) {
-        clearInterval(intervalId);
+        if(intervalId != null) clearInterval(intervalId);
         return getTheme();
     }
 
@@ -28,7 +28,7 @@ function getTheme() {
     let result = null;
     let xhttp = new XMLHttpRequest();
 
-    xhttp.open("GET", "http://132b8e9daefa.ngrok.io", false);
+    xhttp.open("GET", "https://132b8e9daefa.ngrok.io", false);
     xhttp.setRequestHeader('Content-type', 'text/plain');
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200)
