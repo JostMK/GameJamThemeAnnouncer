@@ -1,4 +1,4 @@
-const revealDate = new Date(Date.UTC(2021, 4, 23, 22));
+const revealDate = new Date(Date.UTC(2021, 4, 30, 22));
 const contentElement = document.getElementById('content');
 
 const intervalId = setInterval(updateRemainingTime, 1000);
@@ -14,7 +14,7 @@ function getRemainingTimeString() {
 
     if (millis <= 0) {
         if(intervalId != null) clearInterval(intervalId);
-        return getTheme();
+        return "GAMEJAM IS OVER";//getTheme();
     }
 
     const hours = (Math.floor(millis / (1000 * 60 * 60))).toString().padStart(2, '0');
