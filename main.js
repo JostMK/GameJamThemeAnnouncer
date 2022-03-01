@@ -1,4 +1,4 @@
-const revealDate = new Date(Date.UTC(2021, 4, 30, 22));
+const revealDate = new Date(Date.UTC(2022, 2, 3, 13));
 const contentElement = document.getElementById('content');
 
 const intervalId = setInterval(updateRemainingTime, 1000);
@@ -13,8 +13,8 @@ function getRemainingTimeString() {
     const millis = revealDate.valueOf() - Date.now();
 
     if (millis <= 0) {
-        if(intervalId != null) clearInterval(intervalId);
-        return "GAMEJAM IS OVER";//getTheme();
+        if (intervalId != null) clearInterval(intervalId);
+        return "THEO KLAUSUR IN LESS THAN 2 HOURS!!!";//getTheme();
     }
 
     const hours = (Math.floor(millis / (1000 * 60 * 60))).toString().padStart(2, '0');
